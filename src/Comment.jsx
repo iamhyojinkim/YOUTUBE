@@ -34,7 +34,7 @@ export default function Comment({ videoId }) {
       }
     }
     loadComments();
-  }, [comments]);
+  }, [user, comments]);
 
   return (
     <>

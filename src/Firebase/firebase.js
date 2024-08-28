@@ -1,4 +1,6 @@
 import { initializeApp } from "firebase/app";
+import { logEvent } from "firebase/analytics";
+import { getAnalytics } from "firebase/analytics";
 import { v4 as uuidv4 } from "uuid";
 import { getDatabase, ref, get, set } from "firebase/database";
 import {
@@ -19,7 +21,9 @@ const firebaseConfig = {
   measurementId: "G-8SSMS26N56",
 };
 
+const app = initializeApp(firebaseConfig);
 const provider = new GoogleAuthProvider();
+const analytics = getAnalytics(app);
 const db = getDatabase();
 const auth = getAuth();
 
@@ -27,6 +31,7 @@ export async function login() {
   return signInWithPopup(auth, provider) //
     .then((result) => {
       const user = result.user;
+      logEvent(analytics, "login", { method: "Google" });
       return user;
     });
 }

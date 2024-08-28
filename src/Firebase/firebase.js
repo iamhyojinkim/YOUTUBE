@@ -1,5 +1,4 @@
 import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
 import { v4 as uuidv4 } from "uuid";
 import { getDatabase, ref, get, set } from "firebase/database";
 import {
@@ -20,7 +19,6 @@ const firebaseConfig = {
   measurementId: "G-8SSMS26N56",
 };
 
-const app = initializeApp(firebaseConfig);
 const provider = new GoogleAuthProvider();
 const db = getDatabase();
 const auth = getAuth();

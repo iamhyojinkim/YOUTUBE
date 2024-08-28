@@ -67,7 +67,7 @@ export default function Comment({ videoId }) {
                 {user && (
                   <img
                     img
-                    alt={`${user.displayName}'s profile picture`}
+                    alt=""
                     className="rounded-full w-10 h-10"
                     src={user.photoURL}
                   />

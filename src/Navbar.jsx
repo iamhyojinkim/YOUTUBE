@@ -3,7 +3,7 @@ import { FaYoutube } from "react-icons/fa";
 import { IoMdSearch } from "react-icons/io";
 import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { login, logout, userChange } from "./Firebase/firebase";
+import { login, logout } from "./Firebase/firebase";
 import { useYoutubeApi } from "./Context/YoutubeApi";
 
 export function Navbar() {

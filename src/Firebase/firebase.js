@@ -1,7 +1,7 @@
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 import { v4 as uuidv4 } from "uuid";
-import { getDatabase, ref, get, child, set } from "firebase/database";
+import { getDatabase, ref, get, set } from "firebase/database";
 import {
   getAuth,
   signInWithPopup,
@@ -22,7 +22,6 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 const provider = new GoogleAuthProvider();
-const analytics = getAnalytics(app);
 const db = getDatabase();
 const auth = getAuth();
 

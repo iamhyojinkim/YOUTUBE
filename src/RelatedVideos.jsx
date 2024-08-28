@@ -1,5 +1,4 @@
 import { useQuery } from "@tanstack/react-query";
-import { RelatedVideo } from "./api/RelatedVideo";
 import { useYoutubeApi } from "./Context/YoutubeApi";
 import VideoCards from "./VideoCards";
 

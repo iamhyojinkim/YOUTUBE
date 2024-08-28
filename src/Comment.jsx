@@ -41,11 +41,7 @@ export default function Comment({ videoId }) {
       <form onSubmit={submit}>
         <div className="p-8 flex my-4 mb-8 items-center">
           {user ? (
-            <img
-              className="rounded-full w-10 h-10"
-              alt={`${user.displayName}'s profile picture`}
-              src={user.photoURL}
-            />
+            <img className="rounded-full w-10 h-10" src={user.photoURL} />
           ) : (
             <IoPersonOutline className="text-2xl" />
           )}
@@ -71,6 +67,7 @@ export default function Comment({ videoId }) {
                 {user && (
                   <img
                     img
+                    alt={`${user.displayName}'s profile picture`}
                     className="rounded-full w-10 h-10"
                     src={user.photoURL}
                   />
